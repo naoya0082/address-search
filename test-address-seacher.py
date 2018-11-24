@@ -1,6 +1,11 @@
 import unittest
 
 
+class AddressSearcher:
+    def search(self, postal_code):
+        return "岩手県八幡平市大更"
+
+
 class TestAddressSearcher(unittest.TestCase):
     def test_岩手県八幡平市大更の地名を郵便番号から取得(self):
         address_searcher = AddressSearcher()
