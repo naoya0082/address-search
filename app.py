@@ -2,8 +2,11 @@ import requests
 
 
 class AddressSearcher:
+    def __init__(self):
+        self.base_url = f"http://zipcloud.ibsnet.co.jp/api/search"
+
     def search(self, postal_code):
-        url = f"http://zipcloud.ibsnet.co.jp/api/search?zipcode={postal_code}"
+        url = f"{self.base_url}?zipcode={postal_code}"
         response = requests.get(url)
         response_dict = response.json()
 
