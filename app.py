@@ -10,7 +10,7 @@ class AddressSearcher:
         response = requests.get(url)
         response_dict = response.json()
 
-        if response_dict["results"] == None:
+        if response_dict["results"] is None:
             return "該当するデータは見つかりませんでした。検索キーワードを変えて再検索してください。"
 
         都道府県 = response_dict["results"][0]["address1"]
